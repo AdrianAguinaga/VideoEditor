@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-008
+series: ia-academia
+title: '4.1: Del ejemplo al flujo: organiza archivos con permisos y respaldo'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

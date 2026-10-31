@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-003
+series: ia-academia
+title: '2.1: Instala Node.js y abre la terminal'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

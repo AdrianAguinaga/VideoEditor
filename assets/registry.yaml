@@ -1,0 +1,97 @@
+schema_version: 1
+assets:
+- id: cortinilla-entrada
+  version: 1
+  kind: cortinilla
+  role: entrada
+  path: assets/cortinillas/entrada/cortinilla-entrada/v1.mp4
+  sha256: 4ba45c2347ae1c6f4f3f79f2601eff86e5f77775d542a63e7b26911838bab131
+  license: synthetic fixture (FFmpeg smptehdbars + sine)
+  permissions: solo pruebas; reemplazar por la cortinilla real
+  synthetic_fixture: true
+  registered_at: '2026-10-27T19:14:53+00:00'
+  media:
+    kind: video
+    format_name: mov,mp4,m4a,3gp,3g2,mj2
+    duration_ms: 2000
+    has_video: true
+    has_audio: true
+    width: 1280
+    height: 720
+    fps: 30.0
+    sample_rate: 48000
+    channels: 1
+    codecs:
+    - h264
+    - aac
+- id: lide-intro
+  version: 1
+  kind: cortinilla
+  role: entrada
+  path: assets/cortinillas/entrada/lide-intro/v1.mp4
+  sha256: 855415c611149d782949676448722999fb9aa00c477c2e9545b7a51987b73d7b
+  license: propio LIDE/FCA UABC
+  permissions: uso en cursos LIDE
+  synthetic_fixture: false
+  registered_at: '2026-10-28T20:24:47+00:00'
+  media:
+    kind: video
+    format_name: mov,mp4,m4a,3gp,3g2,mj2
+    duration_ms: 449749
+    has_video: true
+    has_audio: true
+    width: 3840
+    height: 2160
+    fps: 30.0
+    sample_rate: 48000
+    channels: 2
+    codecs:
+    - h264
+    - aac
+- id: lide-salida
+  version: 1
+  kind: cortinilla
+  role: salida
+  path: assets/cortinillas/salida/lide-salida/v1.mp4
+  sha256: 4b87ce80003c8af3e48bc1183a4c0843225c0fd94f011efcff6bb9d62800d77d
+  license: propio LIDE/FCA UABC
+  permissions: uso en cursos LIDE
+  synthetic_fixture: false
+  registered_at: '2026-10-28T20:24:49+00:00'
+  media:
+    kind: video
+    format_name: mov,mp4,m4a,3gp,3g2,mj2
+    duration_ms: 3541
+    has_video: true
+    has_audio: true
+    width: 720
+    height: 1280
+    fps: 30.0
+    sample_rate: 48000
+    channels: 2
+    codecs:
+    - h264
+    - aac
+- id: logo-lide-verde
+  version: 1
+  kind: logo
+  role: null
+  path: assets/logos/logo-lide-verde/v1.jpeg
+  sha256: effbbb5c6a168c041a9886ff985c0cfcffb158c98a09f72875fac403d1db117a
+  license: propio LIDE/FCA UABC
+  permissions: uso en cursos LIDE
+  synthetic_fixture: false
+  registered_at: '2026-10-30T17:21:12+00:00'
+  media:
+    kind: image
+    format_name: image2
+    duration_ms: null
+    has_video: false
+    has_audio: false
+    width: 720
+    height: 960
+    fps: null
+    sample_rate: null
+    channels: null
+    codecs:
+    - mjpeg

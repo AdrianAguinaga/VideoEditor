@@ -1,0 +1,14 @@
+schema_version: 1
+id: curso-piloto
+title: Curso Piloto (fixtures sintéticos)
+language: es
+videos:
+- introduccion
+- clase-001
+- clase-002
+defaults:
+  profile: 720p30
+  style:
+    intro:
+      id: cortinilla-entrada
+      version: 1

@@ -1,0 +1,206 @@
+{
+ "$defs": {
+  "InputRecord": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Id",
+     "type": "string"
+    },
+    "role": {
+     "enum": [
+      "originals",
+      "audio",
+      "slides",
+      "images",
+      "broll",
+      "scripts"
+     ],
+     "title": "Role",
+     "type": "string"
+    },
+    "original_name": {
+     "title": "Original Name",
+     "type": "string"
+    },
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Sha256",
+     "type": "string"
+    },
+    "size_bytes": {
+     "minimum": 0,
+     "title": "Size Bytes",
+     "type": "integer"
+    },
+    "ingested_at": {
+     "title": "Ingested At",
+     "type": "string"
+    },
+    "media": {
+     "$ref": "#/$defs/MediaInfo"
+    }
+   },
+   "required": [
+    "id",
+    "role",
+    "original_name",
+    "path",
+    "sha256",
+    "size_bytes",
+    "ingested_at",
+    "media"
+   ],
+   "title": "InputRecord",
+   "type": "object"
+  },
+  "MediaInfo": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "enum": [
+      "video",
+      "audio",
+      "image"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "format_name": {
+     "title": "Format Name",
+     "type": "string"
+    },
+    "duration_ms": {
+     "anyOf": [
+      {
+       "minimum": 0,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Duration Ms"
+    },
+    "has_video": {
+     "title": "Has Video",
+     "type": "boolean"
+    },
+    "has_audio": {
+     "title": "Has Audio",
+     "type": "boolean"
+    },
+    "width": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Width"
+    },
+    "height": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Height"
+    },
+    "fps": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Fps"
+    },
+    "sample_rate": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Sample Rate"
+    },
+    "channels": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Channels"
+    },
+    "codecs": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Codecs",
+     "type": "array"
+    }
+   },
+   "required": [
+    "kind",
+    "format_name",
+    "duration_ms",
+    "has_video",
+    "has_audio"
+   ],
+   "title": "MediaInfo",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "video": {
+   "pattern": "^[a-z0-9-]+/[a-z0-9-]+$",
+   "title": "Video",
+   "type": "string"
+  },
+  "inputs": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/InputRecord"
+   },
+   "title": "Inputs",
+   "type": "array"
+  }
+ },
+ "required": [
+  "video"
+ ],
+ "title": "InputInventory",
+ "type": "object"
+}

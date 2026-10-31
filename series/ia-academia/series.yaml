@@ -1,0 +1,25 @@
+schema_version: 1
+id: ia-academia
+title: 'Inteligencia Artificial: desde la academia'
+language: es
+videos:
+- introduccion
+- clase-001
+- clase-002
+- clase-003
+- clase-004
+- clase-005
+- clase-006
+- clase-007
+- clase-008
+- clase-009
+defaults:
+  profile: 1080p30
+  style:
+    intro:
+      id: lide-intro
+      version: 1
+    outro:
+      id: lide-salida
+      version: 1
+    background_color: '0x1F483A'

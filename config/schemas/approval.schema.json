@@ -1,0 +1,69 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "id": {
+   "title": "Id",
+   "type": "string"
+  },
+  "video": {
+   "pattern": "^[a-z0-9-]+/[a-z0-9-]+$",
+   "title": "Video",
+   "type": "string"
+  },
+  "run_id": {
+   "title": "Run Id",
+   "type": "string"
+  },
+  "artifact": {
+   "title": "Artifact",
+   "type": "string"
+  },
+  "artifact_sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Artifact Sha256",
+   "type": "string"
+  },
+  "timeline_sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Timeline Sha256",
+   "type": "string"
+  },
+  "scope": {
+   "const": "edit-for-master",
+   "default": "edit-for-master",
+   "title": "Scope",
+   "type": "string"
+  },
+  "actor": {
+   "title": "Actor",
+   "type": "string"
+  },
+  "approved_at": {
+   "title": "Approved At",
+   "type": "string"
+  },
+  "note": {
+   "default": "",
+   "title": "Note",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "video",
+  "run_id",
+  "artifact",
+  "artifact_sha256",
+  "timeline_sha256",
+  "actor",
+  "approved_at"
+ ],
+ "title": "Approval",
+ "type": "object"
+}

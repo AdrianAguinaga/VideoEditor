@@ -1,0 +1,310 @@
+{
+ "$defs": {
+  "AsrSettings": {
+   "additionalProperties": false,
+   "properties": {
+    "model": {
+     "default": "faster-whisper-medium",
+     "title": "Model",
+     "type": "string"
+    },
+    "language": {
+     "default": "es",
+     "title": "Language",
+     "type": "string"
+    },
+    "device": {
+     "default": "cpu",
+     "enum": [
+      "cpu",
+      "cuda",
+      "auto"
+     ],
+     "title": "Device",
+     "type": "string"
+    },
+    "compute_type": {
+     "default": "int8",
+     "title": "Compute Type",
+     "type": "string"
+    },
+    "beam_size": {
+     "default": 5,
+     "maximum": 10,
+     "minimum": 1,
+     "title": "Beam Size",
+     "type": "integer"
+    },
+    "vad_filter": {
+     "default": true,
+     "title": "Vad Filter",
+     "type": "boolean"
+    },
+    "word_timestamps": {
+     "default": true,
+     "title": "Word Timestamps",
+     "type": "boolean"
+    }
+   },
+   "title": "AsrSettings",
+   "type": "object"
+  },
+  "AssetRef": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Id",
+     "type": "string"
+    },
+    "version": {
+     "minimum": 1,
+     "title": "Version",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "id",
+    "version"
+   ],
+   "title": "AssetRef",
+   "type": "object"
+  },
+  "AudioSettings": {
+   "additionalProperties": false,
+   "description": "Voice cleanup on source clips and loudness on the final mix. Every step is off unless set.",
+   "properties": {
+    "highpass_hz": {
+     "anyOf": [
+      {
+       "maximum": 300,
+       "minimum": 20,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Highpass Hz"
+    },
+    "denoise_db": {
+     "anyOf": [
+      {
+       "maximum": 40,
+       "minimum": 1,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Denoise Db"
+    },
+    "compress": {
+     "default": false,
+     "title": "Compress",
+     "type": "boolean"
+    },
+    "loudness_lufs": {
+     "anyOf": [
+      {
+       "maximum": -10,
+       "minimum": -30,
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Loudness Lufs"
+    },
+    "true_peak_db": {
+     "default": -1.5,
+     "maximum": 0,
+     "minimum": -9,
+     "title": "True Peak Db",
+     "type": "number"
+    },
+    "edge_fade_ms": {
+     "default": 0,
+     "maximum": 200,
+     "minimum": 0,
+     "title": "Edge Fade Ms",
+     "type": "integer"
+    }
+   },
+   "title": "AudioSettings",
+   "type": "object"
+  },
+  "ColorSettings": {
+   "additionalProperties": false,
+   "description": "Basic correction applied to source clips (cortinillas are finished pieces and stay untouched).",
+   "properties": {
+    "brightness": {
+     "default": 0,
+     "maximum": 1,
+     "minimum": -1,
+     "title": "Brightness",
+     "type": "number"
+    },
+    "contrast": {
+     "default": 1,
+     "maximum": 3,
+     "minimum": 0,
+     "title": "Contrast",
+     "type": "number"
+    },
+    "saturation": {
+     "default": 1,
+     "maximum": 3,
+     "minimum": 0,
+     "title": "Saturation",
+     "type": "number"
+    },
+    "gamma": {
+     "default": 1,
+     "maximum": 10,
+     "minimum": 0.1,
+     "title": "Gamma",
+     "type": "number"
+    }
+   },
+   "title": "ColorSettings",
+   "type": "object"
+  },
+  "QaSettings": {
+   "additionalProperties": false,
+   "properties": {
+    "duration_tolerance_ms": {
+     "default": 100,
+     "minimum": 0,
+     "title": "Duration Tolerance Ms",
+     "type": "integer"
+    }
+   },
+   "title": "QaSettings",
+   "type": "object"
+  },
+  "StyleSettings": {
+   "additionalProperties": false,
+   "properties": {
+    "intro": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/AssetRef"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "outro": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/AssetRef"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "background_color": {
+     "default": "black",
+     "title": "Background Color",
+     "type": "string"
+    },
+    "background": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/AssetRef"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "background_blur": {
+     "default": false,
+     "title": "Background Blur",
+     "type": "boolean"
+    },
+    "inset_pct": {
+     "default": 0,
+     "maximum": 40,
+     "minimum": 0,
+     "title": "Inset Pct",
+     "type": "integer"
+    }
+   },
+   "title": "StyleSettings",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "description": "Fully resolved settings: workspace < series < video < approved run override.",
+ "properties": {
+  "profile": {
+   "default": "1080p30",
+   "title": "Profile",
+   "type": "string"
+  },
+  "asr": {
+   "$ref": "#/$defs/AsrSettings",
+   "default": {
+    "model": "faster-whisper-medium",
+    "language": "es",
+    "device": "cpu",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "vad_filter": true,
+    "word_timestamps": true
+   }
+  },
+  "style": {
+   "$ref": "#/$defs/StyleSettings",
+   "default": {
+    "intro": null,
+    "outro": null,
+    "background_color": "black",
+    "background": null,
+    "background_blur": false,
+    "inset_pct": 0
+   }
+  },
+  "audio": {
+   "$ref": "#/$defs/AudioSettings",
+   "default": {
+    "highpass_hz": null,
+    "denoise_db": null,
+    "compress": false,
+    "loudness_lufs": null,
+    "true_peak_db": -1.5,
+    "edge_fade_ms": 0
+   }
+  },
+  "color": {
+   "$ref": "#/$defs/ColorSettings",
+   "default": {
+    "brightness": 0.0,
+    "contrast": 1.0,
+    "saturation": 1.0,
+    "gamma": 1.0
+   }
+  },
+  "qa": {
+   "$ref": "#/$defs/QaSettings",
+   "default": {
+    "duration_tolerance_ms": 100
+   }
+  }
+ },
+ "title": "Settings",
+ "type": "object"
+}

@@ -1,0 +1,11 @@
+# ASR model registry. Weights live in .local/models/<name>/ (git-ignored), never in Git.
+schema_version: 1
+models:
+  faster-whisper-medium:
+    backend: faster-whisper
+    repo_id: Systran/faster-whisper-medium
+    revision: 08e178d48790749d25932bbc082711ddcfdfbc4f
+    license: MIT
+    languages: multilingual   # NOT an English-only (.en) model
+    approx_size_mb: 1530
+    approved: 2026-10-27

@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-001
+series: curso-piloto
+title: Clase 1
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

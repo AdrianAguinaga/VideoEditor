@@ -1,0 +1,24 @@
+schema_version: 1
+video: ia-academia/clase-002
+inputs:
+- id: grabacion
+  role: originals
+  original_name: 2026-10-28 17-42-36.mkv
+  path: inputs/originals/grabacion.mkv
+  sha256: 8679c4cde253611b9db07e658ecee7d22f66d9e46602510ceadd9269108de970
+  size_bytes: 43563280
+  ingested_at: '2026-10-29T01:09:59+00:00'
+  media:
+    kind: video
+    format_name: matroska,webm
+    duration_ms: 209750
+    has_video: true
+    has_audio: true
+    width: 1920
+    height: 1080
+    fps: 60.0
+    sample_rate: 48000
+    channels: 2
+    codecs:
+    - h264
+    - aac

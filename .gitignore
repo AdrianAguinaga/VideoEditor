@@ -1,0 +1,29 @@
+# Environments, caches, model weights, local state
+.venv/
+.local/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.env
+
+# Private media and derived data (Git is NOT a media backup; see docs/recovery.md)
+series/*/videos/*/inputs/**
+series/*/videos/*/runs/**
+series/*/videos/*/editorial/transcript/**
+series/*/videos/*/.lock
+series/*/assets/**
+!series/*/videos/*/inputs/**/
+!series/*/assets/**/
+assets/**/*.mp4
+assets/**/*.mov
+assets/**/*.mkv
+assets/**/*.wav
+assets/**/*.mp3
+assets/**/*.m4a
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.ttf
+assets/**/*.otf
+catalog/views/

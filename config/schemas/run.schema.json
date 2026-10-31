@@ -1,0 +1,234 @@
+{
+ "$defs": {
+  "Artifact": {
+   "additionalProperties": false,
+   "properties": {
+    "role": {
+     "title": "Role",
+     "type": "string"
+    },
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Sha256",
+     "type": "string"
+    },
+    "size_bytes": {
+     "title": "Size Bytes",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "role",
+    "path",
+    "sha256",
+    "size_bytes"
+   ],
+   "title": "Artifact",
+   "type": "object"
+  },
+  "QaCheck": {
+   "additionalProperties": false,
+   "properties": {
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "passed",
+      "failed",
+      "skipped"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "detail": {
+     "default": "",
+     "title": "Detail",
+     "type": "string"
+    }
+   },
+   "required": [
+    "name",
+    "status"
+   ],
+   "title": "QaCheck",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "id": {
+   "title": "Id",
+   "type": "string"
+  },
+  "video": {
+   "pattern": "^[a-z0-9-]+/[a-z0-9-]+$",
+   "title": "Video",
+   "type": "string"
+  },
+  "mode": {
+   "enum": [
+    "preview",
+    "master"
+   ],
+   "title": "Mode",
+   "type": "string"
+  },
+  "status": {
+   "enum": [
+    "running",
+    "succeeded",
+    "failed"
+   ],
+   "title": "Status",
+   "type": "string"
+  },
+  "started_at": {
+   "title": "Started At",
+   "type": "string"
+  },
+  "finished_at": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Finished At"
+  },
+  "timeline": {
+   "title": "Timeline",
+   "type": "string"
+  },
+  "timeline_sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Timeline Sha256",
+   "type": "string"
+  },
+  "approval": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Approval"
+  },
+  "expected_duration_ms": {
+   "anyOf": [
+    {
+     "minimum": 0,
+     "type": "integer"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Expected Duration Ms"
+  },
+  "inputs": {
+   "additionalProperties": {
+    "type": "string"
+   },
+   "default": {},
+   "title": "Inputs",
+   "type": "object"
+  },
+  "assets": {
+   "additionalProperties": {
+    "type": "string"
+   },
+   "default": {},
+   "title": "Assets",
+   "type": "object"
+  },
+  "tools": {
+   "additionalProperties": {
+    "type": "string"
+   },
+   "default": {},
+   "title": "Tools",
+   "type": "object"
+  },
+  "commands": {
+   "default": [],
+   "items": {
+    "items": {
+     "type": "string"
+    },
+    "type": "array"
+   },
+   "title": "Commands",
+   "type": "array"
+  },
+  "artifacts": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Artifact"
+   },
+   "title": "Artifacts",
+   "type": "array"
+  },
+  "qa": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/QaCheck"
+   },
+   "title": "Qa",
+   "type": "array"
+  },
+  "error": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Error"
+  },
+  "next_action": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Next Action"
+  }
+ },
+ "required": [
+  "id",
+  "video",
+  "mode",
+  "status",
+  "started_at",
+  "timeline",
+  "timeline_sha256"
+ ],
+ "title": "RunRecord",
+ "type": "object"
+}

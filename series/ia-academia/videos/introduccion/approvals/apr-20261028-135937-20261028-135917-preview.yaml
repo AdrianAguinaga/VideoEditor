@@ -1,0 +1,11 @@
+schema_version: 1
+id: apr-20261028-135937-20261028-135917-preview
+video: ia-academia/introduccion
+run_id: 20261028-135917-preview
+artifact: runs/20261028-135917-preview/outputs/previews/ia-academia_introduccion_preview.mp4
+artifact_sha256: ae392f0168a4f8610bed5ea20c26f624e97fdc69a2217978dfcf211be2429731
+timeline_sha256: 7e600af3c556a54fce03564eb0f980fa8656e3b9efd5176e5130b89e19ad94d9
+scope: edit-for-master
+actor: Adrián Rodríguez
+approved_at: '2026-10-28T20:59:37+00:00'
+note: 'Aprobado en sesión: acepta los 8 cortes propuestos tras ver el preview de v1 (idéntico en contenido)'

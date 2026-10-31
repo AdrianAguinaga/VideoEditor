@@ -1,0 +1,52 @@
+schema_version: 1
+video: ia-academia/clase-004
+transcripts:
+- editorial/transcript/grabacion.20261029T125600.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 300, out_ms: 1700}
+- {kind: source, input: grabacion, in_ms: 3400, out_ms: 127400}
+- {kind: source, input: grabacion, in_ms: 128400, out_ms: 223900}
+- {kind: source, input: grabacion, in_ms: 227100, out_ms: 356100}
+- {kind: source, input: grabacion, in_ms: 358400, out_ms: 362200}
+- {kind: source, input: grabacion, in_ms: 364200, out_ms: 365700}
+- {kind: source, input: grabacion, in_ms: 368000, out_ms: 424400}
+- {kind: source, input: grabacion, in_ms: 426200, out_ms: 427900}
+- {kind: source, input: grabacion, in_ms: 429500, out_ms: 447300}
+- {kind: source, input: grabacion, in_ms: 449100, out_ms: 465000}
+- {kind: source, input: grabacion, in_ms: 467200, out_ms: 472800}
+- {kind: source, input: grabacion, in_ms: 474400, out_ms: 562000}
+- {kind: source, input: grabacion, in_ms: 564100, out_ms: 596300}
+- {kind: source, input: grabacion, in_ms: 598200, out_ms: 675400}
+- {kind: source, input: grabacion, in_ms: 678700, out_ms: 692100}
+- {kind: source, input: grabacion, in_ms: 693700, out_ms: 770300}
+- {kind: source, input: grabacion, in_ms: 773100, out_ms: 774900}
+- {kind: source, input: grabacion, in_ms: 776500, out_ms: 946900}
+- {kind: source, input: grabacion, in_ms: 948300, out_ms: 951900}
+- {kind: source, input: grabacion, in_ms: 954400, out_ms: 956600}
+- {kind: source, input: grabacion, in_ms: 958900, out_ms: 984000}
+- {kind: asset, asset: lide-salida, version: 1}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 300, status: proposed, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 1700, end_ms: 3400, status: proposed, reason: "pausa muerta (1.8 s)", text: ""}
+- {input: grabacion, start_ms: 127400, end_ms: 128400, status: proposed, reason: "repetición", text: "Y lo que (lo que hacemos)"}
+- {input: grabacion, start_ms: 223900, end_ms: 227100, status: proposed, reason: "repetición", text: "Esto es de Google. (Esto es de Google.)"}
+- {input: grabacion, start_ms: 356100, end_ms: 358400, status: proposed, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 362200, end_ms: 364200, status: proposed, reason: "pausa muerta (2.3 s)", text: ""}
+- {input: grabacion, start_ms: 365700, end_ms: 368000, status: proposed, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 424400, end_ms: 426200, status: proposed, reason: "pausa muerta (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 427900, end_ms: 429500, status: proposed, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 447300, end_ms: 449100, status: proposed, reason: "pausa muerta (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 465000, end_ms: 467200, status: proposed, reason: "pausa muerta (2.5 s)", text: ""}
+- {input: grabacion, start_ms: 472800, end_ms: 474400, status: proposed, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 562000, end_ms: 564100, status: proposed, reason: "pausa muerta (2.4 s)", text: ""}
+- {input: grabacion, start_ms: 596300, end_ms: 598200, status: proposed, reason: "pausa muerta (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 675400, end_ms: 678700, status: proposed, reason: "repetición", text: "de mi, de mi, (de lo que yo le acabo de solicitar)"}
+- {input: grabacion, start_ms: 692100, end_ms: 693700, status: proposed, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 770300, end_ms: 773100, status: proposed, reason: "pausa muerta (3.1 s)", text: ""}
+- {input: grabacion, start_ms: 774900, end_ms: 776500, status: proposed, reason: "pausa muerta (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 946900, end_ms: 948300, status: proposed, reason: "pausa muerta (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 951900, end_ms: 954400, status: proposed, reason: "pausa muerta (2.8 s)", text: ""}
+- {input: grabacion, start_ms: 956600, end_ms: 958900, status: proposed, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 984000, end_ms: 985450, status: proposed, reason: "cola muda al final", text: ""}

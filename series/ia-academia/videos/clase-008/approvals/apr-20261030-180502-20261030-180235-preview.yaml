@@ -1,0 +1,11 @@
+schema_version: 1
+id: apr-20261030-180502-20261030-180235-preview
+video: ia-academia/clase-008
+run_id: 20261030-180235-preview
+artifact: runs/20261030-180235-preview/outputs/previews/ia-academia_clase-008_preview.mp4
+artifact_sha256: 06bf6479bf8970f31611bfbb883abc9401bf49e77b62398b62dbdf13aae43b29
+timeline_sha256: f580079682683e017666fadb44cb8dc36a23888a8b56789240a89584f11523d8
+scope: edit-for-master
+actor: Adrián Rodríguez
+approved_at: '2026-10-31T01:05:02+00:00'
+note: Edits aprobados (36 cortes); blurs del correo verificados en preview

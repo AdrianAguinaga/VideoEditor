@@ -1,0 +1,55 @@
+[project]
+name = "video-pipeline"
+version = "0.1.0"
+description = "Reusable multi-video editing pipeline: series/video workspace, ASR, timelines, FFmpeg render and QA."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "faster-whisper>=1.2.1,<2",
+    "pydantic>=2.14,<3",
+    "pyyaml>=6.0.3,<7",
+    "typer>=0.27,<1",
+]
+
+[project.scripts]
+video-pipeline = "video_pipeline.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18",
+    "pytest>=9.1,<10",
+    "ruff>=0.17,<1",
+    "types-pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: needs real ffmpeg/ffprobe",
+    "asr: needs the downloaded ASR model and an authorized Spanish voice sample",
+]
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM"]
+ignore = ["S603", "S607"]  # subprocess with list args (no shell) is the intended pattern
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S108"]
+
+[tool.mypy]
+python_version = "3.13"
+packages = ["video_pipeline"]
+mypy_path = "src"
+ignore_missing_imports = true
+warn_unused_ignores = true

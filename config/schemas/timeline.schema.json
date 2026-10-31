@@ -1,0 +1,674 @@
+{
+ "$defs": {
+  "AssetClip": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "const": "asset",
+     "default": "asset",
+     "title": "Kind",
+     "type": "string"
+    },
+    "asset": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Asset",
+     "type": "string"
+    },
+    "version": {
+     "minimum": 1,
+     "title": "Version",
+     "type": "integer"
+    },
+    "in_ms": {
+     "default": 0,
+     "minimum": 0,
+     "title": "In Ms",
+     "type": "integer"
+    },
+    "out_ms": {
+     "anyOf": [
+      {
+       "minimum": 0,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Out Ms"
+    },
+    "transition": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Transition"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    }
+   },
+   "required": [
+    "asset",
+    "version"
+   ],
+   "title": "AssetClip",
+   "type": "object"
+  },
+  "AssetRef": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Id",
+     "type": "string"
+    },
+    "version": {
+     "minimum": 1,
+     "title": "Version",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "id",
+    "version"
+   ],
+   "title": "AssetRef",
+   "type": "object"
+  },
+  "Blur": {
+   "additionalProperties": false,
+   "description": "Blurs the rectangle: hides personal data, never cuts.",
+   "properties": {
+    "input": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Input",
+     "type": "string"
+    },
+    "start_ms": {
+     "minimum": 0,
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "end_ms": {
+     "minimum": 0,
+     "title": "End Ms",
+     "type": "integer"
+    },
+    "x": {
+     "minimum": 0,
+     "title": "X",
+     "type": "integer"
+    },
+    "y": {
+     "minimum": 0,
+     "title": "Y",
+     "type": "integer"
+    },
+    "w": {
+     "exclusiveMinimum": 0,
+     "title": "W",
+     "type": "integer"
+    },
+    "h": {
+     "exclusiveMinimum": 0,
+     "title": "H",
+     "type": "integer"
+    },
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    }
+   },
+   "required": [
+    "input",
+    "start_ms",
+    "end_ms",
+    "x",
+    "y",
+    "w",
+    "h",
+    "reason"
+   ],
+   "title": "Blur",
+   "type": "object"
+  },
+  "Cut": {
+   "additionalProperties": false,
+   "description": "A removed range, kept for editorial review. Only `accepted` cuts may reach a master.",
+   "properties": {
+    "input": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Input",
+     "type": "string"
+    },
+    "start_ms": {
+     "minimum": 0,
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "end_ms": {
+     "minimum": 0,
+     "title": "End Ms",
+     "type": "integer"
+    },
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    },
+    "text": {
+     "default": "",
+     "title": "Text",
+     "type": "string"
+    },
+    "status": {
+     "default": "proposed",
+     "enum": [
+      "proposed",
+      "accepted",
+      "rejected"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "input",
+    "start_ms",
+    "end_ms",
+    "reason"
+   ],
+   "title": "Cut",
+   "type": "object"
+  },
+  "Music": {
+   "additionalProperties": false,
+   "description": "A registered music/sfx asset under the output range [start_ms, end_ms), looped if shorter.",
+   "properties": {
+    "asset": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Asset",
+     "type": "string"
+    },
+    "version": {
+     "minimum": 1,
+     "title": "Version",
+     "type": "integer"
+    },
+    "start_ms": {
+     "default": 0,
+     "minimum": 0,
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "end_ms": {
+     "anyOf": [
+      {
+       "minimum": 0,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "End Ms"
+    },
+    "volume_db": {
+     "default": -18,
+     "maximum": 6,
+     "minimum": -60,
+     "title": "Volume Db",
+     "type": "number"
+    },
+    "duck": {
+     "default": true,
+     "title": "Duck",
+     "type": "boolean"
+    },
+    "fade_ms": {
+     "default": 1000,
+     "minimum": 0,
+     "title": "Fade Ms",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "asset",
+    "version"
+   ],
+   "title": "Music",
+   "type": "object"
+  },
+  "Overlay": {
+   "additionalProperties": false,
+   "description": "An image (logo, watermark) or text (lower third, title) drawn over the picture.\n\nTimes are source time of `input` when given (follows the edit, like cuts), else output time.",
+   "properties": {
+    "asset": {
+     "anyOf": [
+      {
+       "maxLength": 64,
+       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Asset"
+    },
+    "version": {
+     "anyOf": [
+      {
+       "minimum": 1,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Version"
+    },
+    "text": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Text"
+    },
+    "input": {
+     "anyOf": [
+      {
+       "maxLength": 64,
+       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Input"
+    },
+    "start_ms": {
+     "default": 0,
+     "minimum": 0,
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "end_ms": {
+     "anyOf": [
+      {
+       "minimum": 0,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "End Ms"
+    },
+    "position": {
+     "default": "bottom-left",
+     "enum": [
+      "top-left",
+      "top",
+      "top-right",
+      "center",
+      "bottom-left",
+      "bottom",
+      "bottom-right"
+     ],
+     "title": "Position",
+     "type": "string"
+    },
+    "size_pct": {
+     "default": 5,
+     "exclusiveMinimum": 0,
+     "maximum": 100,
+     "title": "Size Pct",
+     "type": "number"
+    },
+    "opacity": {
+     "default": 1,
+     "maximum": 1,
+     "minimum": 0,
+     "title": "Opacity",
+     "type": "number"
+    },
+    "color": {
+     "default": "white",
+     "pattern": "^#?[A-Za-z0-9]+(@[0-9.]+)?$",
+     "title": "Color",
+     "type": "string"
+    },
+    "font": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/AssetRef"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "box_color": {
+     "anyOf": [
+      {
+       "pattern": "^#?[A-Za-z0-9]+(@[0-9.]+)?$",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": "black@0.6",
+     "title": "Box Color"
+    },
+    "margin_pct": {
+     "default": 4,
+     "maximum": 25,
+     "minimum": 0,
+     "title": "Margin Pct",
+     "type": "number"
+    }
+   },
+   "title": "Overlay",
+   "type": "object"
+  },
+  "SourceClip": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "const": "source",
+     "default": "source",
+     "title": "Kind",
+     "type": "string"
+    },
+    "input": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Input",
+     "type": "string"
+    },
+    "in_ms": {
+     "minimum": 0,
+     "title": "In Ms",
+     "type": "integer"
+    },
+    "out_ms": {
+     "minimum": 0,
+     "title": "Out Ms",
+     "type": "integer"
+    },
+    "still": {
+     "anyOf": [
+      {
+       "maxLength": 64,
+       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Still"
+    },
+    "transition": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Transition"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Note"
+    }
+   },
+   "required": [
+    "input",
+    "in_ms",
+    "out_ms"
+   ],
+   "title": "SourceClip",
+   "type": "object"
+  },
+  "Transition": {
+   "additionalProperties": false,
+   "description": "Blend from the previous clip into this one. Both overlap by `ms`, so the output gets that much shorter.",
+   "properties": {
+    "type": {
+     "default": "fade",
+     "enum": [
+      "fade",
+      "fadeblack",
+      "fadewhite",
+      "dissolve",
+      "wipeleft",
+      "wiperight",
+      "wipeup",
+      "wipedown",
+      "slideleft",
+      "slideright",
+      "smoothleft",
+      "smoothright",
+      "circleopen",
+      "circleclose",
+      "radial",
+      "zoomin",
+      "pixelize"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "ms": {
+     "default": 500,
+     "maximum": 3000,
+     "minimum": 100,
+     "multipleOf": 100,
+     "title": "Ms",
+     "type": "integer"
+    }
+   },
+   "title": "Transition",
+   "type": "object"
+  },
+  "Zoom": {
+   "additionalProperties": false,
+   "description": "Punch-in: the rectangle fills the frame (aspect kept, edges trimmed) to show a detail of the screen.",
+   "properties": {
+    "input": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Input",
+     "type": "string"
+    },
+    "start_ms": {
+     "minimum": 0,
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "end_ms": {
+     "minimum": 0,
+     "title": "End Ms",
+     "type": "integer"
+    },
+    "x": {
+     "minimum": 0,
+     "title": "X",
+     "type": "integer"
+    },
+    "y": {
+     "minimum": 0,
+     "title": "Y",
+     "type": "integer"
+    },
+    "w": {
+     "exclusiveMinimum": 0,
+     "title": "W",
+     "type": "integer"
+    },
+    "h": {
+     "exclusiveMinimum": 0,
+     "title": "H",
+     "type": "integer"
+    },
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    }
+   },
+   "required": [
+    "input",
+    "start_ms",
+    "end_ms",
+    "x",
+    "y",
+    "w",
+    "h",
+    "reason"
+   ],
+   "title": "Zoom",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "video": {
+   "pattern": "^[a-z0-9-]+/[a-z0-9-]+$",
+   "title": "Video",
+   "type": "string"
+  },
+  "transcripts": {
+   "default": [],
+   "items": {
+    "type": "string"
+   },
+   "title": "Transcripts",
+   "type": "array"
+  },
+  "subtitles": {
+   "default": true,
+   "title": "Subtitles",
+   "type": "boolean"
+  },
+  "clips": {
+   "items": {
+    "discriminator": {
+     "mapping": {
+      "asset": "#/$defs/AssetClip",
+      "source": "#/$defs/SourceClip"
+     },
+     "propertyName": "kind"
+    },
+    "oneOf": [
+     {
+      "$ref": "#/$defs/SourceClip"
+     },
+     {
+      "$ref": "#/$defs/AssetClip"
+     }
+    ]
+   },
+   "minItems": 1,
+   "title": "Clips",
+   "type": "array"
+  },
+  "cuts": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Cut"
+   },
+   "title": "Cuts",
+   "type": "array"
+  },
+  "blurs": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Blur"
+   },
+   "title": "Blurs",
+   "type": "array"
+  },
+  "zooms": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Zoom"
+   },
+   "title": "Zooms",
+   "type": "array"
+  },
+  "overlays": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Overlay"
+   },
+   "title": "Overlays",
+   "type": "array"
+  },
+  "music": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/Music"
+   },
+   "title": "Music",
+   "type": "array"
+  },
+  "fade_in_ms": {
+   "default": 0,
+   "maximum": 5000,
+   "minimum": 0,
+   "title": "Fade In Ms",
+   "type": "integer"
+  },
+  "fade_out_ms": {
+   "default": 0,
+   "maximum": 5000,
+   "minimum": 0,
+   "title": "Fade Out Ms",
+   "type": "integer"
+  }
+ },
+ "required": [
+  "video",
+  "clips"
+ ],
+ "title": "Timeline",
+ "type": "object"
+}

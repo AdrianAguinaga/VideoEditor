@@ -1,0 +1,25 @@
+schema_version: 1
+video: ia-academia/clase-001
+transcripts:
+- editorial/transcript/grabacion.20261028T174957.asr.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 1400, out_ms: 114700}
+- {kind: source, input: grabacion, in_ms: 116800, out_ms: 303800, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 305700, out_ms: 589600, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 592100, out_ms: 839750, note: "tras repetición"}
+- {kind: source, input: grabacion, in_ms: 851000, out_ms: 891900, note: "tras muletilla y pausa"}
+- {kind: source, input: grabacion, in_ms: 895250, out_ms: 932000, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 933200, out_ms: 943200, note: "tras repetición"}
+- {kind: source, input: grabacion, in_ms: 943880, out_ms: 958550, note: "tras repetición"}
+- {kind: asset, asset: lide-salida, version: 1}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 1400, status: accepted, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 114700, end_ms: 116800, status: accepted, reason: "pausa muerta (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 303800, end_ms: 305700, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 589600, end_ms: 592100, status: accepted, reason: "repetición", text: "es muy versátil. (Es muy versátil, es muy amigable)"}
+- {input: grabacion, start_ms: 839750, end_ms: 851000, status: accepted, reason: "muletilla + pausa de 5.7 s mientras elige el ejemplo", text: "No quiero un este que será bueno."}
+- {input: grabacion, start_ms: 891900, end_ms: 895250, status: accepted, reason: "pausa muerta (3.4 s) tras escribir el prompt", text: ""}
+- {input: grabacion, start_ms: 932000, end_ms: 933200, status: accepted, reason: "repetición", text: "No es bastante bueno, (es bastante bueno)"}
+- {input: grabacion, start_ms: 943200, end_ms: 943880, status: accepted, reason: "repetición", text: "un de (una gente)"}

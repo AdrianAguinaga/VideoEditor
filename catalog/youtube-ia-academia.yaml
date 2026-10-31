@@ -1,0 +1,95 @@
+# Publicación manual en YouTube de ia-academia (versiones finales aprobadas del 2026-10-30).
+# youtube: enlace una vez subido · classroom: publicación del curso "Inteligencia Artificial: desde la academia hasta tu profesión"
+# donde está el video (enlace al inicio y al final + adjunto) y el material "Videoteca" que los lista todos (2026-10-30).
+series: ia-academia
+videos:
+- video: introduccion
+  title: "Introducción"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\introduccion\runs\20261030-111218-master\outputs\delivery\ia-academia_introduccion.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\introduccion\runs\20261030-111218-master\outputs\delivery\ia-academia_introduccion.srt'
+  youtube: https://youtu.be/hXDPYzTpDEc
+  classroom:
+    publicacion: "0.1 · Empieza aquí: explora el ejemplo y conoce la ruta"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODkxOTQzNjI2NDQ3/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-001
+  title: "Sesión introductoria a Manus AI"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-001\runs\20261030-111305-master\outputs\delivery\ia-academia_clase-001.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-001\runs\20261030-111305-master\outputs\delivery\ia-academia_clase-001.srt'
+  youtube: https://youtu.be/0BGhDf4vNqQ
+  classroom:
+    publicacion: "1.1 · Demostración y guía: crea tu asistente con Manus"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODkxOTM5OTc4NDQ2/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-002
+  title: "Reto 1.2: adapta Manus a tu profesión"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-002\runs\20261030-111553-master\outputs\delivery\ia-academia_clase-002.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-002\runs\20261030-111553-master\outputs\delivery\ia-academia_clase-002.srt'
+  youtube: https://youtu.be/Hk9955qvGIM
+  classroom:
+    publicacion: "1.2 · Reto: adapta Manus a tu profesión y mejora el resultado"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/a/ODcwMTYzMDY2OTM5/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-003
+  title: "2.1: Instala Node.js y abre la terminal"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-003\runs\20261030-111635-master\outputs\delivery\ia-academia_clase-003.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-003\runs\20261030-111635-master\outputs\delivery\ia-academia_clase-003.srt'
+  youtube: https://youtu.be/ttOkz_RhJTc
+  classroom:
+    publicacion: "2.1 · Prepara la terminal: instala Node.js y comprueba npm"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODcwMTY3NDQ3MzE2/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-004
+  title: "2.2: Instalación paso a paso: Agy CLI"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-004\runs\20261030-110253-master\outputs\delivery\ia-academia_clase-004.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-004\runs\20261030-110253-master\outputs\delivery\ia-academia_clase-004.srt'
+  youtube: https://youtu.be/vwCNuCimcnY
+  classroom:
+    publicacion: "2.2 · Instalación paso a paso: Antigravity CLI (google)"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODcwMTY3MzExNjYw/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-005
+  title: "2.3: Punto de control: tu entorno y tu primer diálogo CLI"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-005\runs\20261030-125445-master\outputs\delivery\ia-academia_clase-005.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-005\runs\20261030-125445-master\outputs\delivery\ia-academia_clase-005.srt'
+  youtube: https://youtu.be/MLjy0OEG3iY
+  classroom:
+    publicacion: "2.3 · Punto de control: tu entorno y tu primer diálogo CLI"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/a/ODcwMTY3MjkyMDI3/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-006
+  title: "3.1: Del ejemplo al archivo: crea tu asistente desde el CLI"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-006\runs\20261030-132823-master\outputs\delivery\ia-academia_clase-006.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-006\runs\20261030-132823-master\outputs\delivery\ia-academia_clase-006.srt'
+  youtube: https://youtu.be/1h3A6Q4ojcA
+  classroom:
+    publicacion: "3.1 · Del ejemplo al archivo: crea tu asistente desde el CLI"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODcwMTY3MzMzOTg5/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-007
+  title: "3.2: Reto: reconstruye, prueba y mejora tu página local"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-007\runs\20261030-170657-master\outputs\delivery\ia-academia_clase-007.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-007\runs\20261030-170657-master\outputs\delivery\ia-academia_clase-007.srt'
+  youtube: https://youtu.be/aALReikDrRI
+  classroom:
+    publicacion: "3.2 · Reto: reconstruye, prueba y mejora tu página local"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/a/ODcwMTY3NDU1MTY4/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-008
+  title: "4.1: Del ejemplo al flujo: organiza archivos con permisos y respaldo"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-008\runs\20261030-180503-master\outputs\delivery\ia-academia_clase-008.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-008\runs\20261030-180503-master\outputs\delivery\ia-academia_clase-008.srt'
+  youtube: https://youtu.be/3K4VqDPN3h8
+  classroom:
+    publicacion: "4.1 · Del ejemplo al flujo: organiza archivos con permisos y respaldo"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODcwMTY3NDA3ODU5/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details
+- video: clase-009
+  title: "5.1: Del resultado al proyecto: aplica IA en tu profesión"
+  file: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-009\runs\20261030-191409-master\outputs\delivery\ia-academia_clase-009.mp4'
+  subtitles: 'E:\skills\VideoEditor\series\ia-academia\videos\clase-009\runs\20261030-191409-master\outputs\delivery\ia-academia_clase-009.srt'
+  youtube: https://youtu.be/WluEitpa_DU
+  classroom:
+    publicacion: "5.1 · Del resultado al proyecto: aplica IA en tu profesión"
+    url: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODkxOTgzNzU0NDI5/details
+    videoteca: https://classroom.google.com/c/NzYzNTU0MTE1ODc5/m/ODk2OTE1MTk2OTUx/details

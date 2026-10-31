@@ -1,0 +1,99 @@
+schema_version: 1
+video: ia-academia/clase-008
+transcripts:
+- editorial/transcript/grabacion.20261030T172717.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 400, out_ms: 54600, transition: {type: fade, ms: 500}}
+- {kind: source, input: grabacion, in_ms: 56000, out_ms: 58800}
+- {kind: source, input: grabacion, in_ms: 60600, out_ms: 72200}
+- {kind: source, input: grabacion, in_ms: 74300, out_ms: 77200}
+- {kind: source, input: grabacion, in_ms: 78800, out_ms: 101000}
+- {kind: source, input: grabacion, in_ms: 104500, out_ms: 135200}
+- {kind: source, input: grabacion, in_ms: 136500, out_ms: 147400}
+- {kind: source, input: grabacion, in_ms: 148700, out_ms: 186700}
+- {kind: source, input: grabacion, in_ms: 188000, out_ms: 190100}
+- {kind: source, input: grabacion, in_ms: 192500, out_ms: 198400}
+- {kind: source, input: grabacion, in_ms: 199800, out_ms: 201000}
+- {kind: source, input: grabacion, in_ms: 202900, out_ms: 205500}
+- {kind: source, input: grabacion, in_ms: 207400, out_ms: 215400}
+- {kind: source, input: grabacion, in_ms: 216800, out_ms: 228300}
+- {kind: source, input: grabacion, in_ms: 230100, out_ms: 258500}
+- {kind: source, input: grabacion, in_ms: 261100, out_ms: 268900}
+- {kind: source, input: grabacion, in_ms: 273300, out_ms: 275700}
+- {kind: source, input: grabacion, in_ms: 279500, out_ms: 301300}
+- {kind: source, input: grabacion, in_ms: 302800, out_ms: 324800}
+- {kind: source, input: grabacion, in_ms: 326000, out_ms: 377300}
+- {kind: source, input: grabacion, in_ms: 379000, out_ms: 379400}
+- {kind: source, input: grabacion, in_ms: 379900, out_ms: 408000}
+- {kind: source, input: grabacion, in_ms: 409300, out_ms: 414300}
+- {kind: source, input: grabacion, in_ms: 416000, out_ms: 436400}
+- {kind: source, input: grabacion, in_ms: 439700, out_ms: 452900}
+- {kind: source, input: grabacion, in_ms: 454400, out_ms: 458400}
+- {kind: source, input: grabacion, in_ms: 459600, out_ms: 471700}
+- {kind: source, input: grabacion, in_ms: 473600, out_ms: 478500}
+- {kind: source, input: grabacion, in_ms: 480200, out_ms: 487400}
+- {kind: source, input: grabacion, in_ms: 488800, out_ms: 506200}
+- {kind: source, input: grabacion, in_ms: 507400, out_ms: 519400}
+- {kind: source, input: grabacion, in_ms: 520500, out_ms: 564100}
+- {kind: source, input: grabacion, in_ms: 565400, out_ms: 566200}
+- {kind: source, input: grabacion, in_ms: 567600, out_ms: 581900}
+- {kind: source, input: grabacion, in_ms: 583500, out_ms: 600300}
+- {kind: asset, asset: lide-salida, version: 1, transition: {type: fade, ms: 500}}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 400, status: accepted, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 54600, end_ms: 56000, status: accepted, reason: "pausa muerta (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 58800, end_ms: 60600, status: accepted, reason: "pausa muerta (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 72200, end_ms: 74300, status: accepted, reason: "pausa (2.4 s) mientras descarga", text: ""}
+- {input: grabacion, start_ms: 77200, end_ms: 78800, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 101000, end_ms: 104500, status: accepted, reason: "pausa (3.7 s) moviendo archivos", text: ""}
+- {input: grabacion, start_ms: 135200, end_ms: 136500, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 147400, end_ms: 148700, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 186700, end_ms: 188000, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 190100, end_ms: 192500, status: accepted, reason: "repetición", text: "aquí en el 4.1, (aquí ya en el 4.1,) digo"}
+- {input: grabacion, start_ms: 198400, end_ms: 199800, status: accepted, reason: "repetición", text: "la entrega (de este mismo,) de este mismo material"}
+- {input: grabacion, start_ms: 201000, end_ms: 202900, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 205500, end_ms: 207400, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 215400, end_ms: 216800, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 228300, end_ms: 230100, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 258500, end_ms: 261100, status: accepted, reason: "autocorrección y pausa", text: "un poquito (más.) más específicos"}
+- {input: grabacion, start_ms: 268900, end_ms: 273300, status: accepted, reason: "muletilla y pausas escribiendo el prompt", text: "vas a encontrar (este.) una carpeta"}
+- {input: grabacion, start_ms: 275700, end_ms: 279500, status: accepted, reason: "pausa (4.0 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 301300, end_ms: 302800, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 324800, end_ms: 326000, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 377300, end_ms: 379000, status: accepted, reason: "pausa (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 379400, end_ms: 379900, status: accepted, reason: "repetición", text: "muchas veces (a veces) necesitamos"}
+- {input: grabacion, start_ms: 408000, end_ms: 409300, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 414300, end_ms: 416000, status: accepted, reason: "pausa (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 436400, end_ms: 439700, status: accepted, reason: "pausa (3.7 s) esperando al agente", text: ""}
+- {input: grabacion, start_ms: 452900, end_ms: 454400, status: accepted, reason: "pausa (1.8 s)", text: ""}
+- {input: grabacion, start_ms: 458400, end_ms: 459600, status: accepted, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 471700, end_ms: 473600, status: accepted, reason: "pausa (2.3 s)", text: ""}
+- {input: grabacion, start_ms: 478500, end_ms: 480200, status: accepted, reason: "repetición y pausa", text: "y vamos (a, vamos) a revisarlos"}
+- {input: grabacion, start_ms: 487400, end_ms: 488800, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 506200, end_ms: 507400, status: accepted, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 519400, end_ms: 520500, status: accepted, reason: "repetición", text: "profesional (van a ser,) van a ser muy repetitivas"}
+- {input: grabacion, start_ms: 564100, end_ms: 565400, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 566200, end_ms: 567600, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 581900, end_ms: 583500, status: accepted, reason: "pausa (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 600300, end_ms: 604017, status: accepted, reason: "cola muda al final", text: ""}
+blurs:
+- {input: grabacion, start_ms: 143800, end_ms: 149400, x: 700, y: 384, w: 220, h: 48, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 230200, end_ms: 237200, x: 700, y: 384, w: 220, h: 48, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 260400, end_ms: 297800, x: 716, y: 502, w: 220, h: 48, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 297400, end_ms: 299400, x: 716, y: 388, w: 220, h: 170, reason: "correo en el encabezado de Antigravity CLI (ventana moviéndose)"}
+- {input: grabacion, start_ms: 299200, end_ms: 305400, x: 716, y: 426, w: 220, h: 48, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 325000, end_ms: 336800, x: 150, y: 60, w: 230, h: 50, reason: "correo en el encabezado de Antigravity CLI (pantalla completa)"}
+- {input: grabacion, start_ms: 336400, end_ms: 343800, x: 140, y: 20, w: 360, h: 110, reason: "correo en el encabezado de Antigravity CLI (pantalla completa, fuente ampliada y scroll)"}
+- {input: grabacion, start_ms: 349600, end_ms: 351200, x: 690, y: 376, w: 270, h: 110, reason: "correo en el encabezado de Antigravity CLI (ventana sobre el escritorio)"}
+overlays:
+- text: "Clase 4.1\nDel ejemplo al flujo: organiza archivos con permisos y respaldo"
+  input: grabacion
+  start_ms: 1400
+  end_ms: 8400
+  position: bottom-left
+  size_pct: 4
+  box_color: "0x1F483A@0.85"
+  margin_pct: 12
+- {asset: logo-lide-verde, version: 1, input: grabacion, position: top-right, size_pct: 5, opacity: 0.85, margin_pct: 2}

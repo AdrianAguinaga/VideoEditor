@@ -1,0 +1,24 @@
+schema_version: 1
+video: ia-academia/clase-002
+transcripts:
+- editorial/transcript/grabacion.20261028T181151.asr.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 450, out_ms: 61300}
+- {kind: source, input: grabacion, in_ms: 61800, out_ms: 101300, note: "tras repetición"}
+- {kind: source, input: grabacion, in_ms: 103050, out_ms: 154600, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 156750, out_ms: 159000, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 160700, out_ms: 165000, note: "tras pausa"}
+- {kind: source, input: grabacion, in_ms: 168900, out_ms: 171000, note: "tras carga de página"}
+- {kind: source, input: grabacion, in_ms: 173400, out_ms: 209000, note: "tras pausa"}
+- {kind: asset, asset: lide-salida, version: 1}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 450, status: proposed, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 61300, end_ms: 61800, status: proposed, reason: "repetición", text: "pequeña (pequeña guía)"}
+- {input: grabacion, start_ms: 101300, end_ms: 103050, status: proposed, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 154600, end_ms: 156750, status: proposed, reason: "pausa muerta (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 159000, end_ms: 160700, status: proposed, reason: "pausa muerta (1.8 s)", text: ""}
+- {input: grabacion, start_ms: 165000, end_ms: 168900, status: proposed, reason: "espera de carga de página (4.2 s)", text: ""}
+- {input: grabacion, start_ms: 171000, end_ms: 173400, status: proposed, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 209000, end_ms: 209750, status: proposed, reason: "cola muda al final", text: ""}

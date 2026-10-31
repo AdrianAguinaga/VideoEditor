@@ -1,0 +1,12 @@
+schema_version: 1
+id: apr-20261029-151947-20261029-151627-preview
+video: ia-academia/clase-004
+run_id: 20261029-151627-preview
+artifact: runs/20261029-151627-preview/outputs/previews/ia-academia_clase-004_preview.mp4
+artifact_sha256: 97d2fc6dc7ba5ba484e453c83e5e225f82d4d5897d59e3612b891819a5a00533
+timeline_sha256: 882f221fea908cad6c99bc91056424dcbe83e3127e29b0ac5aea5af85b7ac9f4
+scope: edit-for-master
+actor: Adrián Rodríguez
+approved_at: '2026-10-29T22:19:47+00:00'
+note: Autorización en sesión para la versión final; v4 = v3 + 3 difuminados que faltaban (sin cambios
+  editoriales)

@@ -1,0 +1,228 @@
+{
+ "$defs": {
+  "AssetRecord": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "maxLength": 64,
+     "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+     "title": "Id",
+     "type": "string"
+    },
+    "version": {
+     "minimum": 1,
+     "title": "Version",
+     "type": "integer"
+    },
+    "kind": {
+     "enum": [
+      "cortinilla",
+      "logo",
+      "image",
+      "font",
+      "music",
+      "sfx",
+      "template"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "role": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Role"
+    },
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Sha256",
+     "type": "string"
+    },
+    "license": {
+     "title": "License",
+     "type": "string"
+    },
+    "permissions": {
+     "title": "Permissions",
+     "type": "string"
+    },
+    "synthetic_fixture": {
+     "default": false,
+     "title": "Synthetic Fixture",
+     "type": "boolean"
+    },
+    "registered_at": {
+     "title": "Registered At",
+     "type": "string"
+    },
+    "media": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/MediaInfo"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    }
+   },
+   "required": [
+    "id",
+    "version",
+    "kind",
+    "path",
+    "sha256",
+    "license",
+    "permissions",
+    "registered_at"
+   ],
+   "title": "AssetRecord",
+   "type": "object"
+  },
+  "MediaInfo": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "enum": [
+      "video",
+      "audio",
+      "image"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "format_name": {
+     "title": "Format Name",
+     "type": "string"
+    },
+    "duration_ms": {
+     "anyOf": [
+      {
+       "minimum": 0,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Duration Ms"
+    },
+    "has_video": {
+     "title": "Has Video",
+     "type": "boolean"
+    },
+    "has_audio": {
+     "title": "Has Audio",
+     "type": "boolean"
+    },
+    "width": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Width"
+    },
+    "height": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Height"
+    },
+    "fps": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Fps"
+    },
+    "sample_rate": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Sample Rate"
+    },
+    "channels": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Channels"
+    },
+    "codecs": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Codecs",
+     "type": "array"
+    }
+   },
+   "required": [
+    "kind",
+    "format_name",
+    "duration_ms",
+    "has_video",
+    "has_audio"
+   ],
+   "title": "MediaInfo",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "assets": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/AssetRecord"
+   },
+   "title": "Assets",
+   "type": "array"
+  }
+ },
+ "title": "AssetRegistry",
+ "type": "object"
+}

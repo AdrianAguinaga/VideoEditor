@@ -1,0 +1,7 @@
+# Ajustes de produccion de audio para probar en un preview (no cambia video.yaml).
+audio:
+  highpass_hz: 80
+  denoise_db: 10
+  compress: true
+  loudness_lufs: -16
+  edge_fade_ms: 15

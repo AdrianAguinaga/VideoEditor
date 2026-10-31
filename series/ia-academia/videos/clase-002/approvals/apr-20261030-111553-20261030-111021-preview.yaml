@@ -1,0 +1,12 @@
+schema_version: 1
+id: apr-20261030-111553-20261030-111021-preview
+video: ia-academia/clase-002
+run_id: 20261030-111021-preview
+artifact: runs/20261030-111021-preview/outputs/previews/ia-academia_clase-002_preview.mp4
+artifact_sha256: ce75feee5ea9d41c245578f25c6d3e10cc48a80ed6a612dd5fa80ae38dd007bb
+timeline_sha256: af4fc12db81a3dc5b076f99c721b13604dd36e4835558378ee6b7e24711d71e8
+scope: edit-for-master
+actor: Adrián Rodríguez
+approved_at: '2026-10-30T18:15:53+00:00'
+note: Aprobado por instrucción en sesión con Claude Code (aplicar producción v3 a todos y generar versión
+  final); preview revisado técnicamente y por fotogramas, no visto completo

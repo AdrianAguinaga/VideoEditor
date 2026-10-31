@@ -1,0 +1,69 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "width": {
+   "exclusiveMinimum": 0,
+   "multipleOf": 2,
+   "title": "Width",
+   "type": "integer"
+  },
+  "height": {
+   "exclusiveMinimum": 0,
+   "multipleOf": 2,
+   "title": "Height",
+   "type": "integer"
+  },
+  "fps": {
+   "exclusiveMinimum": 0,
+   "maximum": 120,
+   "title": "Fps",
+   "type": "integer"
+  },
+  "sample_rate": {
+   "default": 48000,
+   "enum": [
+    44100,
+    48000
+   ],
+   "title": "Sample Rate",
+   "type": "integer"
+  },
+  "video_codec": {
+   "const": "libx264",
+   "default": "libx264",
+   "title": "Video Codec",
+   "type": "string"
+  },
+  "crf": {
+   "default": 20,
+   "maximum": 51,
+   "minimum": 0,
+   "title": "Crf",
+   "type": "integer"
+  },
+  "preset": {
+   "default": "medium",
+   "title": "Preset",
+   "type": "string"
+  },
+  "audio_bitrate": {
+   "default": "192k",
+   "title": "Audio Bitrate",
+   "type": "string"
+  },
+  "preview_height": {
+   "default": 480,
+   "exclusiveMinimum": 0,
+   "multipleOf": 2,
+   "title": "Preview Height",
+   "type": "integer"
+  }
+ },
+ "required": [
+  "width",
+  "height",
+  "fps"
+ ],
+ "title": "Profile",
+ "type": "object"
+}

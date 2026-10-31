@@ -1,0 +1,54 @@
+{
+ "$defs": {
+  "Policy": {
+   "additionalProperties": false,
+   "properties": {
+    "originals": {
+     "const": "copy",
+     "default": "copy",
+     "title": "Originals",
+     "type": "string"
+    },
+    "processing": {
+     "const": "local",
+     "default": "local",
+     "title": "Processing",
+     "type": "string"
+    }
+   },
+   "title": "Policy",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "name": {
+   "title": "Name",
+   "type": "string"
+  },
+  "policy": {
+   "$ref": "#/$defs/Policy",
+   "default": {
+    "originals": "copy",
+    "processing": "local"
+   }
+  },
+  "defaults": {
+   "additionalProperties": true,
+   "default": {},
+   "title": "Defaults",
+   "type": "object"
+  }
+ },
+ "required": [
+  "name"
+ ],
+ "title": "WorkspaceConfig",
+ "type": "object"
+}

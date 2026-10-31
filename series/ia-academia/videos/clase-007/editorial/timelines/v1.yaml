@@ -1,0 +1,78 @@
+schema_version: 1
+video: ia-academia/clase-007
+transcripts:
+- editorial/transcript/grabacion.20261030T164814.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 300, out_ms: 22800, transition: {type: fade, ms: 500}}
+- {kind: source, input: grabacion, in_ms: 27100, out_ms: 30800}
+- {kind: source, input: grabacion, in_ms: 35900, out_ms: 88600}
+- {kind: source, input: grabacion, in_ms: 91200, out_ms: 100000}
+- {kind: source, input: grabacion, in_ms: 103800, out_ms: 119600}
+- {kind: source, input: grabacion, in_ms: 122600, out_ms: 136900}
+- {kind: source, input: grabacion, in_ms: 138500, out_ms: 152600}
+- {kind: source, input: grabacion, in_ms: 159300, out_ms: 166600}
+- {kind: source, input: grabacion, in_ms: 171700, out_ms: 195100}
+- {kind: source, input: grabacion, in_ms: 197100, out_ms: 211600}
+- {kind: source, input: grabacion, in_ms: 215000, out_ms: 226000}
+- {kind: source, input: grabacion, in_ms: 229000, out_ms: 231200}
+- {kind: source, input: grabacion, in_ms: 232500, out_ms: 233400}
+- {kind: source, input: grabacion, in_ms: 235500, out_ms: 277300}
+- {kind: source, input: grabacion, in_ms: 282400, out_ms: 294300}
+- {kind: source, input: grabacion, in_ms: 296400, out_ms: 298800}
+- {kind: source, input: grabacion, in_ms: 303000, out_ms: 327800}
+- {kind: source, input: grabacion, in_ms: 329300, out_ms: 332700}
+- {kind: source, input: grabacion, in_ms: 339600, out_ms: 351300}
+- {kind: source, input: grabacion, in_ms: 352600, out_ms: 356900}
+- {kind: source, input: grabacion, in_ms: 365300, out_ms: 369600}
+- {kind: source, input: grabacion, in_ms: 370700, out_ms: 433500}
+- {kind: source, input: grabacion, in_ms: 435500, out_ms: 460900}
+- {kind: source, input: grabacion, in_ms: 463100, out_ms: 538700}
+- {kind: source, input: grabacion, in_ms: 540000, out_ms: 544600}
+- {kind: source, input: grabacion, in_ms: 546000, out_ms: 633900}
+- {kind: asset, asset: lide-salida, version: 1, transition: {type: fade, ms: 500}}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 300, status: proposed, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 22800, end_ms: 27100, status: proposed, reason: "pausa muerta (4.3 s) mientras abre la terminal", text: ""}
+- {input: grabacion, start_ms: 30800, end_ms: 35900, status: proposed, reason: "repetición y pausas", text: "construir un (pequeño) pequeño reto"}
+- {input: grabacion, start_ms: 88600, end_ms: 91200, status: proposed, reason: "repetición", text: "con datos (ficticios) ficticios sobre una persona"}
+- {input: grabacion, start_ms: 100000, end_ms: 103800, status: proposed, reason: "repetición y pausas", text: "se usarían (regular) regularmente"}
+- {input: grabacion, start_ms: 119600, end_ms: 122600, status: proposed, reason: "pausa muerta (2.8 s)", text: ""}
+- {input: grabacion, start_ms: 136900, end_ms: 138500, status: proposed, reason: "pausa muerta (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 152600, end_ms: 159300, status: proposed, reason: "pausa larga (7 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 166600, end_ms: 171700, status: proposed, reason: "pausa larga (5.5 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 195100, end_ms: 197100, status: proposed, reason: "repetición", text: "(en cualquier) en cualquier chat"}
+- {input: grabacion, start_ms: 211600, end_ms: 215000, status: proposed, reason: "pausa (3.8 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 226000, end_ms: 229000, status: proposed, reason: "pausa (2.3 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 231200, end_ms: 232500, status: proposed, reason: "pausa (1.7 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 233400, end_ms: 235500, status: proposed, reason: "pausa (2.0 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 277300, end_ms: 282400, status: proposed, reason: "pausa larga (5.4 s) escribiendo la respuesta", text: ""}
+- {input: grabacion, start_ms: 294300, end_ms: 296400, status: proposed, reason: "autocorrección", text: "académica (los profesor) profesor en tecnologías"}
+- {input: grabacion, start_ms: 298800, end_ms: 303000, status: proposed, reason: "pausa (4.1 s) escribiendo la respuesta", text: ""}
+- {input: grabacion, start_ms: 327800, end_ms: 329300, status: proposed, reason: "pausa (2.0 s) escribiendo la respuesta", text: ""}
+- {input: grabacion, start_ms: 332700, end_ms: 339600, status: proposed, reason: "repetición y pausas", text: "videojuegos y (soy muy) soy muy dedicado"}
+- {input: grabacion, start_ms: 351300, end_ms: 352600, status: proposed, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 356900, end_ms: 365300, status: proposed, reason: "autocorrección y pausas", text: "la información (ya tuvo la información) ya tenía la información"}
+- {input: grabacion, start_ms: 369600, end_ms: 370700, status: proposed, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 433500, end_ms: 435500, status: proposed, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 460900, end_ms: 463100, status: proposed, reason: "pausa (2.4 s)", text: ""}
+- {input: grabacion, start_ms: 538700, end_ms: 540000, status: proposed, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 544600, end_ms: 546000, status: proposed, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 633900, end_ms: 634750, status: proposed, reason: "cola muda al final", text: ""}
+blurs:
+- {input: grabacion, start_ms: 25100, end_ms: 37400, x: 740, y: 624, w: 300, h: 46, reason: "correo en el encabezado de Antigravity CLI (ventana a la derecha)"}
+- {input: grabacion, start_ms: 74000, end_ms: 75300, x: 740, y: 340, w: 320, h: 330, reason: "correo en el encabezado de Antigravity CLI (ventana restaurándose y moviéndose)"}
+- {input: grabacion, start_ms: 75100, end_ms: 257200, x: 820, y: 344, w: 300, h: 46, reason: "correo en el encabezado de Antigravity CLI (ventana arriba al centro)"}
+- {input: grabacion, start_ms: 257000, end_ms: 259800, x: 200, y: 80, w: 830, h: 310, reason: "correo en el encabezado de Antigravity CLI (ventana moviéndose a la izquierda)"}
+- {input: grabacion, start_ms: 259500, end_ms: 267600, x: 200, y: 50, w: 320, h: 100, reason: "correo en el encabezado de Antigravity CLI (ventana a la izquierda, con scroll)"}
+overlays:
+- text: "Clase 3.2\nReto: reconstruye, prueba y mejora tu página local"
+  input: grabacion
+  start_ms: 1300
+  end_ms: 8300
+  position: bottom-left
+  size_pct: 4
+  box_color: "0x1F483A@0.85"
+  margin_pct: 12
+- {asset: logo-lide-verde, version: 1, input: grabacion, position: top-right, size_pct: 5, opacity: 0.85, margin_pct: 2}

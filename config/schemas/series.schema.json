@@ -1,0 +1,48 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "id": {
+   "maxLength": 64,
+   "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+   "title": "Id",
+   "type": "string"
+  },
+  "title": {
+   "title": "Title",
+   "type": "string"
+  },
+  "language": {
+   "default": "es",
+   "title": "Language",
+   "type": "string"
+  },
+  "videos": {
+   "default": [],
+   "items": {
+    "maxLength": 64,
+    "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "type": "string"
+   },
+   "title": "Videos",
+   "type": "array"
+  },
+  "defaults": {
+   "additionalProperties": true,
+   "default": {},
+   "title": "Defaults",
+   "type": "object"
+  }
+ },
+ "required": [
+  "id",
+  "title"
+ ],
+ "title": "SeriesConfig",
+ "type": "object"
+}

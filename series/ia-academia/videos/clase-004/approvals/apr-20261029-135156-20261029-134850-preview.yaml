@@ -1,0 +1,12 @@
+schema_version: 1
+id: apr-20261029-135156-20261029-134850-preview
+video: ia-academia/clase-004
+run_id: 20261029-134850-preview
+artifact: runs/20261029-134850-preview/outputs/previews/ia-academia_clase-004_preview.mp4
+artifact_sha256: b82bb5296d467a889d9dbdebced3dac25b9eb689864f1d6a1b5b94821bc49100
+timeline_sha256: 49f6f3089708eff83c3d0b164c45120bcfb6a1071e8cfe102ea5613de8379c89
+scope: edit-for-master
+actor: Adrián Rodríguez
+approved_at: '2026-10-29T20:51:56+00:00'
+note: 'Aprobado en sesión (''autorizo que crees la versión final''): 22 cortes aceptados, 12 difuminados
+  de correo, subtítulos revisados'

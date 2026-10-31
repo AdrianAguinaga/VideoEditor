@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-005
+series: ia-academia
+title: '2.3: Punto de control: tu entorno y tu primer diálogo CLI'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-007
+series: ia-academia
+title: '3.2: Reto: reconstruye, prueba y mejora tu página local'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

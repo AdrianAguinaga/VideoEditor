@@ -1,0 +1,44 @@
+schema_version: 1
+video: ia-academia/clase-005
+transcripts:
+- editorial/transcript/grabacion.20261030T121104.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 300, out_ms: 1700, transition: {type: fade, ms: 500}}
+- {kind: source, input: grabacion, in_ms: 3400, out_ms: 30400}
+- {kind: source, input: grabacion, in_ms: 32100, out_ms: 60900}
+- {kind: source, input: grabacion, in_ms: 63300, out_ms: 68100}
+- {kind: source, input: grabacion, in_ms: 69300, out_ms: 98300}
+- {kind: source, input: grabacion, in_ms: 100500, out_ms: 108400}
+- {kind: source, input: grabacion, in_ms: 112000, out_ms: 120300}
+- {kind: source, input: grabacion, in_ms: 122900, out_ms: 186200}
+- {kind: source, input: grabacion, in_ms: 187700, out_ms: 258500}
+- {kind: asset, asset: lide-salida, version: 1, transition: {type: fade, ms: 500}}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 300, status: accepted, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 1700, end_ms: 3400, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 30400, end_ms: 32100, status: accepted, reason: "pausa muerta (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 60900, end_ms: 63300, status: accepted, reason: "pausa muerta (2.8 s)", text: ""}
+- {input: grabacion, start_ms: 68100, end_ms: 69300, status: accepted, reason: "repetición", text: "(Y aquí damos,) aquí damos una explicación"}
+- {input: grabacion, start_ms: 98300, end_ms: 100500, status: accepted, reason: "autocorrección", text: "(Eso no es mentir, eso no es,) eso no es verdad"}
+- {input: grabacion, start_ms: 108400, end_ms: 112000, status: accepted, reason: "autocorrección", text: "(vea documentos, no, no,) vea, descargas"}
+- {input: grabacion, start_ms: 120300, end_ms: 122900, status: accepted, reason: "pausa muerta (2.9 s)", text: ""}
+- {input: grabacion, start_ms: 186200, end_ms: 187700, status: accepted, reason: "pausa muerta (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 258500, end_ms: 259200, status: accepted, reason: "cola muda al final", text: ""}
+blurs:
+- {input: grabacion, start_ms: 46900, end_ms: 47900, x: 880, y: 436, w: 220, h: 38, reason: "correo en el encabezado de Antigravity CLI (ventana antes de moverla)"}
+- {input: grabacion, start_ms: 46400, end_ms: 52400, x: 930, y: 370, w: 290, h: 38, reason: "correo en el encabezado de Antigravity CLI (ventana)"}
+- {input: grabacion, start_ms: 58400, end_ms: 66800, x: 930, y: 370, w: 290, h: 38, reason: "correo en el encabezado de Antigravity CLI (ventana)"}
+- {input: grabacion, start_ms: 66700, end_ms: 70500, x: 200, y: 36, w: 320, h: 90, reason: "correo en el encabezado de Antigravity CLI (pantalla completa, con scroll)"}
+- {input: grabacion, start_ms: 192800, end_ms: 204700, x: 150, y: 314, w: 320, h: 40, reason: "correo en Account de /usage"}
+overlays:
+- text: "Clase 2.3\nPunto de control: tu entorno y tu primer diálogo CLI"
+  input: grabacion
+  start_ms: 4400
+  end_ms: 11400
+  position: bottom-left
+  size_pct: 4
+  box_color: "0x1F483A@0.85"
+  margin_pct: 12
+- {asset: logo-lide-verde, version: 1, input: grabacion, position: top-right, size_pct: 5, opacity: 0.85, margin_pct: 2}

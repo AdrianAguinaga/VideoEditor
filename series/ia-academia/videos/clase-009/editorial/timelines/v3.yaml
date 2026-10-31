@@ -1,0 +1,84 @@
+schema_version: 1
+video: ia-academia/clase-009
+transcripts:
+- editorial/transcript/grabacion.20261030T182715.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 200, out_ms: 10100, transition: {type: fade, ms: 500}}
+- {kind: source, input: grabacion, in_ms: 11400, out_ms: 13400}
+- {kind: source, input: grabacion, in_ms: 14100, out_ms: 15300}
+- {kind: source, input: grabacion, in_ms: 16500, out_ms: 19100}
+- {kind: source, input: grabacion, in_ms: 20400, out_ms: 61800}
+- {kind: source, input: grabacion, in_ms: 63200, out_ms: 100100}
+- {kind: source, input: grabacion, in_ms: 102900, out_ms: 131600}
+- {kind: source, input: grabacion, in_ms: 133800, out_ms: 138600}
+- {kind: source, input: grabacion, in_ms: 140500, out_ms: 178600}
+- {kind: source, input: grabacion, in_ms: 180300, out_ms: 182000}
+- {kind: source, input: grabacion, in_ms: 183300, out_ms: 200400}
+- {kind: source, input: grabacion, in_ms: 201000, out_ms: 209500}
+- {kind: source, input: grabacion, in_ms: 210700, out_ms: 211300}
+- {kind: source, input: grabacion, in_ms: 213200, out_ms: 214500}
+- {kind: source, input: grabacion, in_ms: 217600, out_ms: 222900}
+- {kind: source, input: grabacion, in_ms: 224600, out_ms: 249000}
+- {kind: source, input: grabacion, in_ms: 249600, out_ms: 269700}
+- {kind: source, input: grabacion, in_ms: 271900, out_ms: 278500}
+- {kind: source, input: grabacion, in_ms: 280200, out_ms: 294300}
+- {kind: source, input: grabacion, in_ms: 295600, out_ms: 322200}
+- {kind: source, input: grabacion, in_ms: 324200, out_ms: 339700}
+- {kind: source, input: grabacion, in_ms: 341200, out_ms: 342600}
+- {kind: source, input: grabacion, in_ms: 344300, out_ms: 346800}
+- {kind: source, input: grabacion, in_ms: 348800, out_ms: 368400}
+- {kind: source, input: grabacion, in_ms: 369600, out_ms: 396700}
+- {kind: source, input: grabacion, in_ms: 398500, out_ms: 503000}
+- {kind: source, input: grabacion, in_ms: 504200, out_ms: 517000}
+- {kind: asset, asset: lide-salida, version: 1, transition: {type: fade, ms: 500}}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 200, status: accepted, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 10100, end_ms: 11400, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 13400, end_ms: 14100, status: accepted, reason: "repetición", text: "aplicar lo que hemos (lo que hemos) aprendido"}
+- {input: grabacion, start_ms: 15300, end_ms: 16500, status: accepted, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 19100, end_ms: 20400, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 61800, end_ms: 63200, status: accepted, reason: "pausa (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 100100, end_ms: 102900, status: accepted, reason: "repetición y pausa", text: "un proceso (de.) de prueba"}
+- {input: grabacion, start_ms: 131600, end_ms: 133800, status: accepted, reason: "pausa (2.5 s)", text: ""}
+- {input: grabacion, start_ms: 138600, end_ms: 140500, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 178600, end_ms: 180300, status: accepted, reason: "pausa (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 182000, end_ms: 183300, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 200400, end_ms: 201000, status: accepted, reason: "repetición", text: "para este (para este) punto"}
+- {input: grabacion, start_ms: 209500, end_ms: 210700, status: accepted, reason: "pausa (1.4 s)", text: ""}
+- {input: grabacion, start_ms: 211300, end_ms: 213200, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 214500, end_ms: 217600, status: accepted, reason: "pausa (3.4 s) abriendo la terminal", text: ""}
+- {input: grabacion, start_ms: 222900, end_ms: 224600, status: accepted, reason: "pausa (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 249000, end_ms: 249600, status: accepted, reason: "repetición", text: "del modelo (del modelo)"}
+- {input: grabacion, start_ms: 269700, end_ms: 271900, status: accepted, reason: "pausa (2.5 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 278500, end_ms: 280200, status: accepted, reason: "pausa (2.0 s) escribiendo el prompt", text: ""}
+- {input: grabacion, start_ms: 294300, end_ms: 295600, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 322200, end_ms: 324200, status: accepted, reason: "repetición y pausa", text: "ustedes mismos, (ustedes mismos,) pero"}
+- {input: grabacion, start_ms: 339700, end_ms: 341200, status: accepted, reason: "pausa (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 342600, end_ms: 344300, status: accepted, reason: "pausa (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 346800, end_ms: 348800, status: accepted, reason: "pausa (2.3 s)", text: ""}
+- {input: grabacion, start_ms: 368400, end_ms: 369600, status: accepted, reason: "pausa (1.6 s)", text: ""}
+- {input: grabacion, start_ms: 396700, end_ms: 398500, status: accepted, reason: "pausa (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 503000, end_ms: 504200, status: accepted, reason: "pausa (1.5 s)", text: ""}
+- {input: grabacion, start_ms: 517000, end_ms: 517734, status: accepted, reason: "cola muda al final", text: ""}
+blurs:
+- {input: grabacion, start_ms: 206400, end_ms: 208600, x: 690, y: 370, w: 260, h: 70, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 208200, end_ms: 209000, x: 100, y: 360, w: 840, h: 480, reason: "correo en el encabezado de Antigravity CLI (dos ventanas cambiando de lugar)"}
+- {input: grabacion, start_ms: 208800, end_ms: 212200, x: 330, y: 420, w: 330, h: 160, reason: "correo en el encabezado de Antigravity CLI (ventana a la izquierda)"}
+- {input: grabacion, start_ms: 243400, end_ms: 252200, x: 550, y: 380, w: 260, h: 80, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 252000, end_ms: 253900, x: 470, y: 380, w: 330, h: 110, reason: "correo en el encabezado de Antigravity CLI (pantalla /usage (Account))"}
+- {input: grabacion, start_ms: 253600, end_ms: 336200, x: 550, y: 310, w: 260, h: 70, reason: "correo en el encabezado de Antigravity CLI (ventana al centro)"}
+- {input: grabacion, start_ms: 302600, end_ms: 304600, x: 530, y: 240, w: 300, h: 160, reason: "correo en el encabezado de Antigravity CLI (ventana con scroll)"}
+- {input: grabacion, start_ms: 415800, end_ms: 417800, x: 390, y: 410, w: 290, h: 110, reason: "correo en el encabezado de Antigravity CLI (ventana sobre el escritorio)"}
+- {input: grabacion, start_ms: 419400, end_ms: 435000, x: 550, y: 240, w: 280, h: 140, reason: "correo en el encabezado de Antigravity CLI (ventana al centro, con scroll)"}
+overlays:
+- text: "Clase 5.1\nDel resultado al proyecto: aplica IA en tu profesión"
+  input: grabacion
+  start_ms: 1200
+  end_ms: 8200
+  position: bottom-left
+  size_pct: 4
+  box_color: "0x1F483A@0.85"
+  margin_pct: 12
+- {asset: logo-lide-verde, version: 1, input: grabacion, position: top-right, size_pct: 5, opacity: 0.85, margin_pct: 2}

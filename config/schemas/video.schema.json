@@ -1,0 +1,98 @@
+{
+ "$defs": {
+  "EditorialPolicy": {
+   "additionalProperties": false,
+   "properties": {
+    "propose": {
+     "default": [
+      "errores",
+      "repeticiones"
+     ],
+     "items": {
+      "type": "string"
+     },
+     "title": "Propose",
+     "type": "array"
+    },
+    "preserve": {
+     "default": [
+      "negaciones",
+      "cifras",
+      "pasos",
+      "pausas pedagógicas"
+     ],
+     "items": {
+      "type": "string"
+     },
+     "title": "Preserve",
+     "type": "array"
+    }
+   },
+   "title": "EditorialPolicy",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema_version": {
+   "const": 1,
+   "default": 1,
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "id": {
+   "maxLength": 64,
+   "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+   "title": "Id",
+   "type": "string"
+  },
+  "series": {
+   "maxLength": 64,
+   "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+   "title": "Series",
+   "type": "string"
+  },
+  "title": {
+   "title": "Title",
+   "type": "string"
+  },
+  "privacy": {
+   "default": "private",
+   "enum": [
+    "private",
+    "internal",
+    "public"
+   ],
+   "title": "Privacy",
+   "type": "string"
+  },
+  "editorial": {
+   "$ref": "#/$defs/EditorialPolicy",
+   "default": {
+    "propose": [
+     "errores",
+     "repeticiones"
+    ],
+    "preserve": [
+     "negaciones",
+     "cifras",
+     "pasos",
+     "pausas pedagógicas"
+    ]
+   }
+  },
+  "overrides": {
+   "additionalProperties": true,
+   "default": {},
+   "title": "Overrides",
+   "type": "object"
+  }
+ },
+ "required": [
+  "id",
+  "series",
+  "title"
+ ],
+ "title": "VideoConfig",
+ "type": "object"
+}

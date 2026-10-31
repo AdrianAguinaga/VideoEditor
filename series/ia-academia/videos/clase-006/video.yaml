@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-006
+series: ia-academia
+title: '3.1: Del ejemplo al archivo: crea tu asistente desde el CLI'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

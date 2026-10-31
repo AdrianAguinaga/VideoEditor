@@ -1,0 +1,15 @@
+schema_version: 1
+id: clase-009
+series: ia-academia
+title: '5.1: Del resultado al proyecto: aplica IA en tu profesión'
+privacy: private
+editorial:
+  propose:
+  - errores
+  - repeticiones
+  preserve:
+  - negaciones
+  - cifras
+  - pasos
+  - pausas pedagógicas
+overrides: {}

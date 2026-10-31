@@ -1,0 +1,13 @@
+schema_version: 1
+video: curso-piloto/clase-002
+transcripts: []
+subtitles: true
+clips:
+- kind: asset
+  asset: cortinilla-entrada
+  version: 1
+- kind: source
+  input: grabacion
+  in_ms: 0
+  out_ms: 6000
+cuts: []

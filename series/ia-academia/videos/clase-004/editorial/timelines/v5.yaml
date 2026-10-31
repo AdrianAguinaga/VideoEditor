@@ -1,0 +1,72 @@
+schema_version: 1
+video: ia-academia/clase-004
+transcripts:
+- editorial/transcript/grabacion.20261029T125600.reviewed.json
+subtitles: true
+clips:
+- {kind: asset, asset: lide-intro, version: 1, in_ms: 0, out_ms: 6600}  # la animación termina en 6.1 s; el resto es imagen fija
+- {kind: source, input: grabacion, in_ms: 300, out_ms: 1700}
+- {kind: source, input: grabacion, in_ms: 3400, out_ms: 127400}
+- {kind: source, input: grabacion, in_ms: 128400, out_ms: 223900}
+- {kind: source, input: grabacion, in_ms: 227100, out_ms: 356100}
+- {kind: source, input: grabacion, in_ms: 358400, out_ms: 362200}
+- {kind: source, input: grabacion, in_ms: 364200, out_ms: 365700}
+- {kind: source, input: grabacion, in_ms: 368000, out_ms: 424400}
+- {kind: source, input: grabacion, in_ms: 426200, out_ms: 427900}
+- {kind: source, input: grabacion, in_ms: 429500, out_ms: 447300}
+- {kind: source, input: grabacion, in_ms: 449100, out_ms: 465000}
+- {kind: source, input: grabacion, in_ms: 467200, out_ms: 472800}
+- {kind: source, input: grabacion, in_ms: 474400, out_ms: 562000}
+- {kind: source, input: grabacion, in_ms: 564100, out_ms: 596300}
+- {kind: source, input: grabacion, in_ms: 598200, out_ms: 675400}
+- {kind: source, input: grabacion, in_ms: 678700, out_ms: 692100}
+- {kind: source, input: grabacion, in_ms: 693700, out_ms: 770300}
+- {kind: source, input: grabacion, in_ms: 773100, out_ms: 774900}
+- {kind: source, input: grabacion, in_ms: 776500, out_ms: 946900}
+- {kind: source, input: grabacion, in_ms: 948300, out_ms: 951900}
+- {kind: source, input: grabacion, in_ms: 954400, out_ms: 956600}
+- {kind: source, input: grabacion, in_ms: 958900, out_ms: 984000}
+- {kind: asset, asset: lide-salida, version: 1}
+cuts:
+- {input: grabacion, start_ms: 0, end_ms: 300, status: accepted, reason: "silencio inicial", text: ""}
+- {input: grabacion, start_ms: 1700, end_ms: 3400, status: accepted, reason: "pausa muerta (1.8 s)", text: ""}
+- {input: grabacion, start_ms: 127400, end_ms: 128400, status: accepted, reason: "repetición", text: "Y lo que (lo que hacemos)"}
+- {input: grabacion, start_ms: 223900, end_ms: 227100, status: accepted, reason: "repetición", text: "Esto es de Google. (Esto es de Google.)"}
+- {input: grabacion, start_ms: 356100, end_ms: 358400, status: accepted, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 362200, end_ms: 364200, status: accepted, reason: "pausa muerta (2.3 s)", text: ""}
+- {input: grabacion, start_ms: 365700, end_ms: 368000, status: accepted, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 424400, end_ms: 426200, status: accepted, reason: "pausa muerta (2.1 s)", text: ""}
+- {input: grabacion, start_ms: 427900, end_ms: 429500, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 447300, end_ms: 449100, status: accepted, reason: "pausa muerta (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 465000, end_ms: 467200, status: accepted, reason: "pausa muerta (2.5 s)", text: ""}
+- {input: grabacion, start_ms: 472800, end_ms: 474400, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 562000, end_ms: 564100, status: accepted, reason: "pausa muerta (2.4 s)", text: ""}
+- {input: grabacion, start_ms: 596300, end_ms: 598200, status: accepted, reason: "pausa muerta (2.2 s)", text: ""}
+- {input: grabacion, start_ms: 675400, end_ms: 678700, status: accepted, reason: "repetición", text: "de mi, de mi, (de lo que yo le acabo de solicitar)"}
+- {input: grabacion, start_ms: 692100, end_ms: 693700, status: accepted, reason: "pausa muerta (1.9 s)", text: ""}
+- {input: grabacion, start_ms: 770300, end_ms: 773100, status: accepted, reason: "pausa muerta (3.1 s)", text: ""}
+- {input: grabacion, start_ms: 774900, end_ms: 776500, status: accepted, reason: "pausa muerta (2.0 s)", text: ""}
+- {input: grabacion, start_ms: 946900, end_ms: 948300, status: accepted, reason: "pausa muerta (1.7 s)", text: ""}
+- {input: grabacion, start_ms: 951900, end_ms: 954400, status: accepted, reason: "pausa muerta (2.8 s)", text: ""}
+- {input: grabacion, start_ms: 956600, end_ms: 958900, status: accepted, reason: "pausa muerta (2.6 s)", text: ""}
+- {input: grabacion, start_ms: 984000, end_ms: 985450, status: accepted, reason: "cola muda al final", text: ""}
+blurs:
+- {input: grabacion, start_ms: 222800, end_ms: 237800, x: 334, y: 252, w: 412, h: 60, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 236600, end_ms: 242800, x: 334, y: 178, w: 412, h: 60, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 270500, end_ms: 309800, x: 1030, y: 546, w: 216, h: 50, reason: "correo personal en el selector de cuentas"}
+- {input: grabacion, start_ms: 270500, end_ms: 309800, x: 1030, y: 456, w: 286, h: 50, reason: "correo UABC en el selector de cuentas"}
+- {input: grabacion, start_ms: 308500, end_ms: 347000, x: 338, y: 622, w: 224, h: 52, reason: "correo en la pantalla de confirmación de Google"}
+- {input: grabacion, start_ms: 374400, end_ms: 409800, x: 284, y: 96, w: 344, h: 54, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 403000, end_ms: 404500, x: 596, y: 148, w: 412, h: 110, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 427000, end_ms: 432000, x: 768, y: 568, w: 208, h: 42, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 454400, end_ms: 456000, x: 164, y: 44, w: 304, h: 100, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 454800, end_ms: 456800, x: 228, y: 80, w: 286, h: 48, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 455800, end_ms: 477800, x: 246, y: 86, w: 308, h: 50, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 476600, end_ms: 484800, x: 246, y: 30, w: 308, h: 50, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 534100, end_ms: 536400, x: 246, y: 86, w: 308, h: 50, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 877800, end_ms: 886200, x: 246, y: 86, w: 308, h: 50, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 897600, end_ms: 925800, x: 148, y: 310, w: 308, h: 50, reason: "correo en el encabezado de Antigravity CLI"}
+- {input: grabacion, start_ms: 402200, end_ms: 404600, x: 600, y: 100, w: 440, h: 160, reason: "correo en el encabezado (la ventana cambia de tamaño)"}
+- {input: grabacion, start_ms: 431000, end_ms: 433600, x: 128, y: 40, w: 264, h: 98, reason: "correo en el encabezado (ventana pequeña)"}
+- {input: grabacion, start_ms: 450400, end_ms: 455400, x: 128, y: 40, w: 264, h: 98, reason: "correo en el encabezado (ventana pequeña)"}
+- {input: grabacion, start_ms: 446800, end_ms: 450600, x: 128, y: 40, w: 264, h: 98, reason: "correo en el encabezado (ventana pequeña)"}
